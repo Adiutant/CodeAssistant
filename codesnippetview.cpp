@@ -83,7 +83,7 @@ void CodeSnippetView::loadFromFile(const QString &path)
     QFile file(path);
     if (file.open(QIODevice::ReadWrite)){
         auto data =  file.readAll();
-        QJsonDocument doc = QJsonDocument::fromJson(data);
+        auto doc = QJsonDocument::fromJson(data);
         auto obj = doc.object();
         if (obj.contains("source")){
             auto value = obj.value("source");

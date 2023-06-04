@@ -4,7 +4,7 @@
 DbHelper::DbHelper()
 {
     sdb = QSqlDatabase::addDatabase("QSQLITE");
-    sdb.setDatabaseName("B:/QtProjects/CodeAssistant/code.db");
+    sdb.setDatabaseName("code.db");
 
     if (!sdb.open()) {
         qDebug() << sdb.lastError().text();
